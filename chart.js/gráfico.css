@@ -1,0 +1,31 @@
+.imagemfundo{
+display: flex;
+ background-image:url(https://png.pngtree.com/thumb_back/fw800/background/20230715/pngtree-code-cracking-hacker-in-a-data-center-environment-amidst-a-digital-image_3886769.jpg); 
+  background-repeat: no-repeat;
+   background-size: contain;
+    background-attachment:scroll
+
+}
+
+.conteiner{
+
+    margin-top: 50px; 
+    margin-left: 500px; 
+
+}
+
+.titulo{
+    font-family: monospace;
+     width:fit-content 60px;
+    background-color:aliceblue ;
+}
+
+.grafico1{
+    background-color: rgba(83, 239, 221, 0.712) ; 
+     border-style:double;
+}
+
+.grafico2{
+    background-color: rgba(83, 239, 221, 0.712) ;
+    border-style:double;
+}

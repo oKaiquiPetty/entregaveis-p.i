@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Implementando Chart js </title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="gráfico.css">
+</head>
+<body class="imagemfundo" >
+    <center>
+        <div  class="conteiner">
+            <h1 class="titulo" > Grafico de temperatura e umidade</h1>
+    <div class="grafico1" >
+        <canvas id="myChart" class="chart-container" style="position: relative; height: 45vh; width: 45vw"></canvas>
+    </div>
+    <div class="grafico2">
+    <canvas id="myChart2" class="chart-container" style="position: relative; height: 45vh; width: 45vw"></canvas>
+   </div>
+</div>
+</body>
+<script>
+    const labels = [
+        '12:00',
+        '13:00',
+        '14:00',
+        '15:00',
+        '16:00',
+        '17:00',
+    ];
+        
+     const data = {
+     labels: labels,
+     datasets: [{
+     label: 'Temperatura',
+     backgroundColor: 'red',
+     borderColor: 'red',
+     data: [30, 29, 28, 25, 22, 23],
+     },
+
+     { 
+        label: 'Umidade',
+        backgroundColor: 'blue',
+        borderColor: 'blue',
+        data: [80, 82, 80, 85, 80, 83],
+     }
+    ]
+    };
+    
+const config = {
+    type: 'line',
+    data: data,
+    options: {}
+};
+</script>
+<script>
+    const labels2 = [
+        'Janeiro',
+        'Fevereiro',
+        'Março',
+        'Abril',
+        'Maio',
+        'Junho'
+    ];
+
+    const data2 = {
+    labels: labels,
+    datasets: [{
+    label: 'Temperatura',
+    backgroundColor: 'red',
+    borderColor: 'red',
+    data: [22, 24, 27, 23, 20, 18],    
+    },
+
+    {
+    label: 'Umidade',
+    backgroundColor: 'blue',
+    borderColor: 'blue',
+    data: [90, 89, 93, 87, 88, 82],
+    }
+]
+};
+
+const config2 = {
+      type: 'bar',
+      data: data,
+      options: {}
+};
+
+</script>
+<script>
+const myChart = new Chart(
+    document.getElementById('myChart'),
+    config 
+)
+
+</script>
+
+<script>
+const myChart2 = new Chart(
+    document.getElementById('myChart2'),
+    config2
+)
+</script>
+</html>
